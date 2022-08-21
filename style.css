@@ -1,0 +1,301 @@
+@import url('https://fonts.googleapis.com/css2?family=Poppins:wght@300;400;500;600;700&display=swap');
+
+body{
+    background-image: url(images/bg-intro-desktop.png) ;
+    background-color: hsl(0, 100%, 74%);
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    height: 100vh;
+}
+
+.main_container{
+    display: flex;
+    width: 75%;
+}
+
+*{
+    margin: 0;  
+    box-sizing: border-box;
+}
+
+:root {
+    /* Colors */
+
+--Red: hsl(0, 100%, 74%) ;
+--Green: hsl(154, 59%, 51%);
+--Green-Hover: hsl(154, 59%, 51%, 0.662);
+--Blue: hsl(248, 32%, 49%);
+--Dark-Blue: hsl(249, 10%, 26%) ;
+--Grayish-Blue: hsl(246, 25%, 77%);
+--Grey: rgb(88, 88, 88);
+
+}
+
+
+
+
+
+/*    LEFT CONTAINER     */
+
+.left_container{ 
+    flex: 1;
+    border-radius: 0.5rem;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    
+}
+
+.left_container h1{
+    font-family: 'Poppins';
+    font-size: 2.5rem;
+    font-weight: 700;
+    color: white;
+    line-height: 3rem;
+    padding-right: 6rem;
+
+}
+
+.left_container p{
+    font-family: 'Poppins';
+    font-size: 16px;
+    font-weight: 300;
+    color: white;
+    margin-top: 1rem;
+    line-height: 1.8rem;
+    padding-right: 2rem;
+}
+
+
+/* RIGHT CONTAINER */
+
+            /* free trial message */
+
+.right_container{
+    flex: 1;
+    border-radius: 0.5rem;
+    display: flex;
+    flex-direction: column;
+}       
+
+.free_trial_msg{
+    padding: 1rem;
+    margin-bottom: 1.5rem;
+    background: var(--Blue);
+    border-radius: 0.5rem;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    -webkit-box-shadow: 0px 5px 0px 1px rgba(0,0,0,0.20); 
+    box-shadow: 0px 5px 0px 1px rgba(0,0,0,0.20);
+}
+
+.free_trial_msg p{
+    font-family: 'Poppins';
+    font-size: 13px;
+    font-weight: 300;
+    color: white;
+}
+
+            /* form part */
+
+
+form{
+    background-color: white;
+    display: flex;
+    flex-direction: column; 
+    justify-content: space-around;
+    align-items: center;
+    padding: 3rem;
+    border-radius: 0.5rem;
+    -webkit-box-shadow: 0px 5px 0px 1px rgba(0,0,0,0.20); 
+    box-shadow: 0px 5px 0px 1px rgba(0,0,0,0.20);
+    position: relative;
+    
+}
+
+
+form .input, form .submit{
+    width: 450px;
+    margin-top: 20px;
+    font-family: 'Poppins';
+    font-weight: 600;
+    font-size: 13px;
+    border-radius: 5px;
+
+}
+
+form .input{
+    color: var(--Grey);
+    padding: 1.2rem;
+    border: 1px solid hsla(249, 10%, 26%, 0.134);
+    
+}
+
+
+form .submit{
+    padding: 1rem;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    background-color: hsl(154, 59%, 51%);
+    border: none;
+    color: white;
+    font-weight: 500;
+    letter-spacing: 1px;
+    -webkit-box-shadow: inset 0px -84px 2px -79px rgba(0,0,0,0.1);
+    -moz-box-shadow: inset 0px -84px 2px -79px rgba(0,0,0,0.1);
+    box-shadow: inset 0px -84px 2px -79px rgba(0,0,0,0.1);
+}
+
+
+
+
+            /*  Agreeing msg  */
+
+.agreeing_msg{
+    font-family: 'Poppins';
+    font-size: 11px;
+    font-weight: 600;
+    color: hsla(249, 10%, 26%, 0.277);
+    margin-top: 10px;
+}
+.agreeing_msg strong{
+    color:hsl(0, 100%, 74%) ;
+}
+
+
+
+/* ACTIVE STATE */
+
+.input:focus{
+    outline-style: solid;
+    outline-color: var(--Blue);
+    
+}
+
+
+.submit:hover{
+    background-color: var(--Green-Hover);
+    cursor: pointer;
+}
+
+
+            /*  Invalid state   */
+
+.error_message_fn, .error_message_ln, .error_message_e, .error_message_p{  
+    display: none;
+    width: 100%;
+    text-align: right;
+    font-family: 'Poppins';
+    font-weight: 500;
+    font-style: italic;
+    font-size: 11px;
+    color: hsl(0, 100%, 74%);  
+    margin-top: 5px; 
+     
+}
+
+
+#first_name.invalid, #last_name.invalid, #email.invalid, #password.invalid{
+    color: var(--Red) ;
+    border: 2px solid var(--Red);
+    font-family: 'Poppins';
+    background-image: url(images/icon-error.svg);
+    background-repeat: no-repeat;
+    background-position-y: center;
+    background-position: 95%; 
+    
+    
+} 
+
+.input.invalid::placeholder{
+    color: transparent;
+}
+
+
+.attribution {
+    font-family: 'Poppins';
+    font-size: 13px;
+    text-align: center;
+    margin-top: 2rem;
+}
+
+.attribution a {
+    color: hsl(228, 45%, 44%);
+}
+
+/* RESPONSIVE DESIGN */
+
+@media all and (max-width: 600px) {    /* en dessous de 800px */
+
+    .main_container{
+        max-width: 600px;
+        flex-direction: column;
+        padding-top: 20rem;
+    }
+
+    .left_container{
+        margin-top: 20rem;
+    }
+
+    .left_container h1{
+        text-align: center;
+        padding-right: 0;
+        font-size: 2rem;
+    }
+
+    .left_container p{
+        text-align: center;
+        padding-right: 0;
+        font-size: 13px;
+        padding: 1rem;
+        margin-bottom: 2rem;
+        letter-spacing: 1px;
+        line-height: 1.4rem;
+    }
+
+    .right_container{
+        margin-bottom: 10rem;
+    }
+
+    .free_trial_msg{
+        padding: 2rem;
+        text-align: center;
+    }
+
+    form{
+        padding: 1rem;
+    }
+
+    form .input, form .submit{
+        width: 100%;
+    }
+
+    .agreeing_msg{
+        text-align: center;
+    }
+    
+}
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
