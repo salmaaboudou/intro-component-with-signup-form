@@ -11,7 +11,7 @@ body{
 
 .main_container{
     display: flex;
-    width: 75%;
+    max-width: 75%;
 }
 
 *{
@@ -230,9 +230,6 @@ form .submit{
 
 @media all and (max-width: 600px) {    /* en dessous de 800px */
 
-    .body{
-        margin-bottom: 5rem;
-    }
 
     .main_container{
         max-width: 600px;
@@ -260,9 +257,6 @@ form .submit{
         line-height: 1.4rem;
     }
 
-    .right_container{
-        margin-bottom: 10rem;
-    }
 
     .free_trial_msg{
         padding: 2rem;
